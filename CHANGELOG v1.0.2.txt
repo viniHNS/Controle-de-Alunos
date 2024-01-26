@@ -1,0 +1,7 @@
+Correção de bugs:
+- Corrigido filtro "Periodo de busca".
+
+Adições:
+- Adicionado campo "Telefone Internacional" no cadastro de alunos.
+
+Versão 1.0.2 -> 25/01/2024

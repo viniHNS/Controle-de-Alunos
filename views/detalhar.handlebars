@@ -1,0 +1,155 @@
+<div class="container mt-5">
+    <div class="row mt-5">
+        <!-- Cadastro dos alunos -->  
+        <form action="/consulta" method="get">
+            <h4 >Dados do aluno</h4>
+            <hr>
+            <div class="row">
+                <div class="mt-4 mb-2 col-6 form-floating">
+                    <input name="nome" type="text" class="form-control custom-border" id="floatingInputName" placeholder="Nome do aluno" value="{{aluno.nome}}" disabled>
+                    <label for="floatingInputName" style="left: auto;">Nome</label>
+                </div>
+                <div class="mt-4 mb-2 col-2 form-floating">
+                    <input name="dataNascimento" type="date" class="form-control custom-border" id="floatingDate" placeholder="Data de nascimento" value="{{aluno.dataNascimento}}" disabled>
+                    <label for="floatingDate" style="left: auto;">Data de nascimento</label>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="cpf" type="text" class="form-control custom-border" id="floatingInputCPF" placeholder="cpf" data-bs-toggle="tooltip" data-bs-title="Somente números" autocomplete="off" value="{{aluno.cpf}}" disabled>
+                    <label for="floatingInputCPF" style="left: auto;">CPF</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="rg" type="text" class="form-control custom-border" id="floatingInputRG" placeholder="rg" autocomplete="off" value="{{aluno.rg}}" disabled>
+                    <label for="floatingInputRG" style="left: auto;">RG</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="escola" class="form-select custom-border" id="floatingSelectEscola" aria-label="Escolas municipais" disabled>
+                        <option {{#ifCond aluno.nomeEscola '==' 'Não informado'}} selected {{/ifCond}}>Não informado</option>
+                        <option {{#ifCond aluno.nomeEscola '==' 'Maximirian'}} selected {{/ifCond}}>Maximirian</option>
+                        <option {{#ifCond aluno.nomeEscola '==' 'Kennedy'}} selected {{/ifCond}}>Kennedy</option>
+                        <option {{#ifCond aluno.nomeEscola '==' 'Rainha'}} selected {{/ifCond}}>Rainha</option>
+                    </select>
+                    <label for="floatingSelectEscola" style="left: auto;">Escola em que estuda</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="sexo" class="form-select custom-border" id="floatingSelectSexo"
+                        aria-label="sexo" disabled>
+                        <option  {{#ifCond aluno.sexo '==' 'Não informado'}} selected {{/ifCond}}>Não informado</option>
+                        <option {{#ifCond aluno.sexo '==' 'Masculino'}} selected {{/ifCond}}>Masculino</option>
+                        <option {{#ifCond aluno.sexo '==' 'Feminino'}} selected {{/ifCond}}>Feminino</option>
+                    </select>
+                    <label for="floatingSelectSexo" style="left: auto;">Sexo</label>
+                </div>
+                
+            </div>  
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="turma" class="form-select custom-border" id="floatingSelectTurma" aria-label="Turmas" disabled>
+                        <option {{#ifCond aluno.serieEscola '==' 'Não informado'}} selected {{/ifCond}}>Não informado</option>
+                        <option {{#ifCond aluno.serieEscola '==' '1º ano'}} selected {{/ifCond}}>1º ano</option>
+                        <option {{#ifCond aluno.serieEscola '==' '2º ano'}} selected {{/ifCond}}>2º ano</option>
+                        <option {{#ifCond aluno.serieEscola '==' '3º ano'}} selected {{/ifCond}}>3º ano</option>
+                        <option {{#ifCond aluno.serieEscola '==' '4º ano'}} selected {{/ifCond}}>4º ano</option>
+                        <option {{#ifCond aluno.serieEscola '==' '5º ano'}} selected {{/ifCond}}>5º ano</option>
+                    </select>
+                    <label for="floatingSelectTurma" style="left: auto;">Turma</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="periodo" class="form-select custom-border" id="floatingSelectPeriodo" disabled>
+                        <option {{#ifCond aluno.periodoEstudoEscola '==' 'Não informado'}} selected {{/ifCond}}>Não informado</option>
+                        <option {{#ifCond aluno.periodoEstudoEscola '==' 'Matutino'}} selected {{/ifCond}}>Matutino</option>
+                        <option {{#ifCond aluno.periodoEstudoEscola '==' 'Vespertino'}} selected {{/ifCond}}>Vespertino</option>
+                    </select>
+                    <label for="floatingSelectPeriodo" style="left: auto;">Periodo</label>
+                </div>
+            </div> 
+            <h4 class="mt-4 pt-4">Dados do responsável</h4> 
+            <hr>
+            <div class="row">
+                <div class="mt-4 mb-2 col-8 form-floating">
+                    <input name="nomeResponsavel" type="text" class="form-control custom-border" id="floatingInputNameResponsavel" placeholder="Nome do responsável" value="{{aluno.nomeResponsavel}}" disabled>
+                    <label for="floatingInputNameResponsavel" style="left: auto;">Nome</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-7 form-floating">
+                    <input name="enderecoResponsavel" type="text" class="form-control custom-border" id="floatingInputEnderecoResponsavel" placeholder="Endereco do responsavel" autocomplete="off" value="{{aluno.logradouro}}" disabled>
+                    <label for="floatingInputEnderecoResponsavel" style="left: auto;">Endereço</label>
+                </div>
+                <div class="mt-4 mb-2 col-1 form-floating">
+                    <input name="numeroEnderecoResponsavel" type="text" class="form-control custom-border" id="floatingInputNumeroEnderecoResponsavel" placeholder="Numero residencia do responsavel" value="{{aluno.numero}}" disabled>
+                    <label for="floatingInputNumeroEnderecoResponsavel" style="left: auto;">Numero</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="bairro" type="text" class="form-control custom-border" id="floatingInputBairroResponsavel" placeholder="Bairro do responsavel" autocomplete="off" value="{{aluno.bairro}}" disabled>
+                    <label for="floatingInputBairroResponsavel" style="left: auto;">Bairro</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="telefoneResponsavel1" type="text" class="form-control custom-border" id="floatingInputTelefoneResponsavel11" placeholder="Telefone do responsavel" data-bs-toggle="tooltip" data-bs-title="(DDD) + Número" autocomplete="off" value="{{aluno.telefoneResponsavel1}}" disabled>
+                    <label for="floatingInputTelefoneResponsavel11" style="left: auto;" >Telefone 1 (Brasileiro)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="telefoneResponsavel2" type="text" class="form-control custom-border" id="floatingInputTelefoneResponsavel22" placeholder="Telefone do responsavel" data-bs-toggle="tooltip" data-bs-title="(DDD) + Número" autocomplete="off" value="{{aluno.telefoneResponsavel2}}" disabled>
+                    <label for="floatingInputTelefoneResponsavel22" style="left: auto;" >Telefone 2 (Brasileiro)</label>
+                </div>
+                 <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="telefoneResponsavelInternacional" type="text" class="form-control custom-border" id="floatingInputTelefoneResponsavelInternacional" placeholder="Telefone do responsavel" data-bs-toggle="tooltip" data-bs-title="(DDD) + Número" autocomplete="off" value="{{aluno.telefoneResponsavelInternacional}}" disabled>
+                    <label for="floatingInputTelefoneResponsavelInternacional" style="left: auto;" >Telefone Internacional</label>
+                </div>
+            </div>
+            <h4 class="mt-4 pt-4">Dados do contra turno</h4> 
+            <hr>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                     <select name="utilizaTransporte" class="form-select custom-border" id="floatingSelectTransporte" aria-label="Transportes" disabled>
+                        <option {{#if aluno.utilizaTransporte}} selected {{/if}}>Sim</option>
+                        <option {{#unless aluno.utilizaTransporte}} selected {{/unless}}>Não</option>
+                    </select>
+                    <label for="floatingSelectTransporte" style="left: auto;">Utiliza Transporte escolar?</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                     <select name="somenteRobotica" class="form-select custom-border" id="floatingSelectSomenteRobotica" aria-label="Somente Robotica" disabled>
+                        <option {{#if aluno.somenteRobotica}} selected {{/if}}>Sim</option>
+                        <option {{#unless aluno.somenteRobotica}} selected {{/unless}}value="2">Não</option>
+                    </select>
+                    <label for="floatingSelectSomenteRobotica" style="left: auto;">Participará somente das aulas de robótica?</label>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="mt-4 mb-2 col-4 form-floating">
+                     <select name="outrasOficinas" class="form-select custom-border" id="floatingSelectOutrasOficinas" aria-label="Outras oficinas" disabled>
+                        <option {{#if aluno.outrasOficinas}} selected {{/if}}>Sim</option>
+                        <option {{#unless aluno.outrasOficinas}} selected {{/unless}}>Não</option>
+                    </select>
+                    <label for="floatingSelectOutrasOficinas" style="left: auto;">Participará das outras oficinas?</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="status" class="form-select custom-border" id="floatingSelectStatus" aria-label="Status" disabled>
+                        <option {{#if aluno.ativo}} selected {{/if}}>Ativo</option>
+                        <option {{#unless aluno.ativo}} selected {{/unless}}>Inativo</option>
+                    </select>
+                    <label for="floatingSelectStatus" style="left: auto;">Status</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-8 form-floating">
+                    <textarea name="observacoes" class="form-control custom-border" placeholder="Observações aqui" id="floatingTextarea2" style="height: 100px" disabled>{{aluno.observacoes}}</textarea>
+                    <label for="floatingTextarea2" style="left: auto;">Observações</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 my-4 pb-4">
+                    <button type="submit" class="btn btn-dark">Voltar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

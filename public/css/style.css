@@ -1,0 +1,36 @@
+:root{
+    --cinza-hover: #5d5d5d;
+    --cinza-ativo: #3d3d3d;
+}
+
+body {
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
+}
+  
+html {
+    height: -webkit-fill-available;
+}
+  
+main {
+    height: -webkit-fill-available;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: auto;
+}
+  
+.dropdown-toggle { outline: 0; }
+
+.nav-pills .nav-link:hover {
+    background-color: var(--cinza-hover); 
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--cinza-ativo); /* Change this to the color you want */
+}
+
+.custom-border {
+    border-color: #afafaf !important;
+}
+
+ 

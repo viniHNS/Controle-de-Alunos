@@ -1,0 +1,1 @@
+A imagem deve ter as seguintes dimensões: 620x120

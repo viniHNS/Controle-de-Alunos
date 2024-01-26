@@ -1,0 +1,153 @@
+<style>
+    .container {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+</style>
+
+<div class="container animate__animated animate__fadeInDownBig">
+    <div class="row mt-5">
+        <div class="col-4 mt-5">
+            <div class="shadow-lg p-4 rounded-3 h-100">
+                <div id="periodos"></div>
+            </div>
+        </div>
+        <div class="col-3 mt-5">
+            <div class="shadow-lg p-3 rounded-3 h-100 d-flex justify-content-center">
+                <div class="p-4">
+                    <h3 class="fw-bold fs-4">Alunos Ativos: </h3>
+                    <h2 class="text-center mt-5 pt-4 fw-bold">{{countAlunosAtivos}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 mt-5">
+            <div class="shadow-lg p-3 rounded-3 h-100 d-flex justify-content-center">
+                <div class="p-4">
+                    <h3 class="fw-bold fs-4">Alunos Inativos: </h3>
+                    <h2 class="text-center mt-5 pt-4 fw-bold text-danger">{{countAlunosInativos}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 mt-5">
+            <div class="shadow-lg p-3 rounded-3 h-100 d-flex align-items-center justify-content-center">
+                <h2 class="fw-semibold display-4">WIP</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+         <div class="col-6 mt-4">
+            <div class="shadow-lg p-4 rounded-3 h-100">
+                <div id="turmas-por-periodo"></div>
+            </div>
+        </div>
+        <div class="col-6 mt-4">
+            <div class="shadow-lg p-4 rounded-3 h-100 d-flex align-items-center justify-content-center">
+                <h2 class="fw-semibold display-1">WIP</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+
+        const countMatutino = {{ countMatutino }};
+        const countVespertino = {{ countVespertino }};
+
+        const countAlunosAtivosMatutino = {{ countAlunosMatutinoAtivos }};
+        const countAlunosAtivosVespertino = {{ countAlunosVespertinoAtivos }};
+
+        const countAlunosMatutino1Ano = {{ countAlunosMatutino1Ano }};
+        const countAlunosMatutino2Ano = {{ countAlunosMatutino2Ano }};
+        const countAlunosMatutino3Ano = {{ countAlunosMatutino3Ano }};
+        const countAlunosMatutino4Ano = {{ countAlunosMatutino4Ano }};
+        const countAlunosMatutino5Ano = {{ countAlunosMatutino5Ano }};
+        const countAlunosVespertino1Ano = {{ countAlunosVespertino1Ano }};
+        const countAlunosVespertino2Ano = {{ countAlunosVespertino2Ano }};
+        const countAlunosVespertino3Ano = {{ countAlunosVespertino3Ano }};
+        const countAlunosVespertino4Ano = {{ countAlunosVespertino4Ano }};
+        const countAlunosVespertino5Ano = {{ countAlunosVespertino5Ano }};
+
+        let optionAlunosPorPeriodo = {
+            chart: {
+                type: 'donut'
+            },
+            series: [countAlunosAtivosMatutino, countAlunosAtivosVespertino],
+            labels: ['Matutino', 'Vespertino'],
+            dataLabels: {
+                enabled: false
+            },
+            plotOptions: {
+                pie: {
+                    donut: {
+                        size: '70%'
+                    }
+                }
+            },
+            title: {
+                text: 'Alunos por período',
+                align: 'center',
+                margin: 10,
+                style: {
+                    fontSize: '24px',
+                    fontWeight: 'bold',
+                    fontFamily: undefined,
+                    color: '#263238'
+                },
+            },
+            legend: {
+                show: true,
+                position: 'right',
+                horizontalAlign: 'center',
+                floating: false,
+                fontSize: '14px',
+                offsetX: -10,
+                offsetY: 80
+            }
+        }
+
+        let optionsBarraQtdAlunosPorTurmaPeriodo = {
+            chart: {
+                type: 'bar',
+                height: 350,
+                stacked: true,
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '75%',
+                    endingShape: 'rounded',
+                    borderRadius: 10,
+                },
+            },
+            series: [{
+                name: 'Matutino',
+                data: [{{countAlunosMatutino1Ano}}, {{countAlunosMatutino2Ano}}, {{countAlunosMatutino3Ano}}, {{countAlunosMatutino4Ano}}, {{countAlunosMatutino5Ano}}]
+            }, {
+                name: 'Vespertino',
+                data: [{{countAlunosVespertino1Ano}}, {{countAlunosVespertino2Ano}}, {{countAlunosVespertino3Ano}}, {{countAlunosVespertino4Ano}}, {{countAlunosVespertino5Ano}}]
+            }],
+            xaxis: {
+                categories: ['1º ano', '2º ano', '3º ano', '4º ano', '5º ano'],
+            },
+            yaxis: {
+                min: 0,
+                tickAmount: 5,
+                title: {
+                    text: 'Quantidade de Alunos',
+                },
+                
+            },
+            fill: {
+                opacity: 1
+            },
+            title: {
+                text: 'Quantidade de Alunos por Turma e Período'
+            }
+        }
+
+        let chartAlunosPorPeriodo = new ApexCharts(document.querySelector("#periodos"), optionAlunosPorPeriodo);
+        let chartBarraQtdAlunosPorTurmaPeriodo = new ApexCharts(document.querySelector("#turmas-por-periodo"), optionsBarraQtdAlunosPorTurmaPeriodo);
+        chartAlunosPorPeriodo.render();
+        chartBarraQtdAlunosPorTurmaPeriodo.render();
+    </script>

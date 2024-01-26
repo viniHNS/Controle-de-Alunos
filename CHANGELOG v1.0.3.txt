@@ -1,0 +1,4 @@
+Correção de bugs:
+- Corrigido a edição do campo "Status", onde mesmo alterando seu valor para "ativo" ou "inativo", o mesmo permanecia inalterado
+
+Versão 1.0.3 -> 25/01/2024

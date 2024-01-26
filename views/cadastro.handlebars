@@ -1,0 +1,243 @@
+<div class="container mt-5">
+    <div class="row mt-5">
+        <!-- Cadastro dos alunos -->
+        <form action="/cadastro" method="post" id="cadastro">
+            <h4>Dados do aluno</h4>
+            <hr>
+            <div class="row">
+                <div class="mt-4 mb-2 col-6 form-floating">
+                    <input name="nome" type="text" class="form-control custom-border" id="floatingInputName"
+                        placeholder="Nome do aluno">
+                    <label for="floatingInputName" style="left: auto;">Nome</label>
+                </div>
+                <div class="mt-4 mb-2 col-2 form-floating">
+                    <input name="dataNascimento" type="date" class="form-control custom-border" id="floatingDate"
+                        placeholder="Data de nascimento">
+                    <label for="floatingDate" style="left: auto;">Data de nascimento</label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="cpf" type="text" class="form-control custom-border" id="floatingInputCPF"
+                        placeholder="cpf" data-bs-toggle="tooltip" data-bs-title="Somente números" autocomplete="off">
+                    <label for="floatingInputCPF" style="left: auto;">CPF</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="rg" type="text" class="form-control custom-border" id="floatingInputRG"
+                        placeholder="rg" autocomplete="off">
+                    <label for="floatingInputRG" style="left: auto;">RG</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="escola" class="form-select custom-border" id="floatingSelectEscola"
+                        aria-label="Escolas municipais">
+                        <option selected>Escolha uma opção</option>
+                        <option value="1">Maximirian</option>
+                        <option value="2">Kennedy</option>
+                        <option value="3">Rainha</option>
+                    </select>
+                    <label for="floatingSelectEscola" style="left: auto;">Escola em que estuda</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="sexo" class="form-select custom-border" id="floatingSelectSexo" aria-label="sexo">
+                        <option selected>Não informado</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Feminino</option>
+                    </select>
+                    <label for="floatingSelectSexo" style="left: auto;">Sexo</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="turma" class="form-select custom-border" id="floatingSelectTurma" aria-label="Turmas">
+                        <option selected>Escolha uma opção</option>
+                        <option value="1">1º ano</option>
+                        <option value="2">2º ano</option>
+                        <option value="3">3º ano</option>
+                        <option value="4">4º ano</option>
+                        <option value="5">5º ano</option>
+                    </select>
+                    <label for="floatingSelectTurma" style="left: auto;">Turma</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="periodo" class="form-select custom-border" id="floatingSelectPeriodo">
+                        <option selected>Escolha uma opção</option>
+                        <option value="1">Matutino</option>
+                        <option value="2">Vespertino</option>
+                    </select>
+                    <label for="floatingSelectPeriodo" style="left: auto;">Periodo</label>
+                </div>
+            </div>
+            <h4 class="mt-4 pt-4">Dados do responsável</h4>
+            <hr>
+            <div class="row">
+                <div class="mt-4 mb-2 col-8 form-floating">
+                    <input name="nomeResponsavel" type="text" class="form-control custom-border"
+                        id="floatingInputNameResponsavel" placeholder="Nome do responsável">
+                    <label for="floatingInputNameResponsavel" style="left: auto;">Nome</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-7 form-floating">
+                    <input name="enderecoResponsavel" type="text" class="form-control custom-border"
+                        id="floatingInputEnderecoResponsavel" placeholder="Endereco do responsavel" autocomplete="off">
+                    <label for="floatingInputEnderecoResponsavel" style="left: auto;">Endereço</label>
+                </div>
+                <div class="mt-4 mb-2 col-1 form-floating">
+                    <input name="numeroEnderecoResponsavel" type="text" class="form-control custom-border"
+                        id="floatingInputNumeroEnderecoResponsavel" placeholder="Numero residencia do responsavel">
+                    <label for="floatingInputNumeroEnderecoResponsavel" style="left: auto;">Numero</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="bairro" type="text" class="form-control custom-border"
+                        id="floatingInputBairroResponsavel" placeholder="Bairro do responsavel" autocomplete="off">
+                    <label for="floatingInputBairroResponsavel" style="left: auto;">Bairro</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="telefoneResponsavel1" type="text" class="form-control custom-border"
+                        id="floatingInputTelefoneResponsavel1" placeholder="Telefone do responsavel"
+                        data-bs-toggle="tooltip" data-bs-title="(DDD) + Número" autocomplete="off">
+                    <label for="floatingInputTelefoneResponsavel" style="left: auto;">Telefone 1 (Brasileiro)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="telefoneResponsavel2" type="text" class="form-control custom-border"
+                        id="floatingInputTelefoneResponsavel2" placeholder="Telefone do responsavel"
+                        data-bs-toggle="tooltip" data-bs-title="(DDD) + Número" autocomplete="off">
+                    <label for="floatingInputTelefoneResponsavel2" style="left: auto;">Telefone 2 (Brasileiro)</label>
+                </div>
+                 <div class="mt-4 mb-2 col-4 form-floating">
+                    <input name="telefoneResponsavelInternacional" type="text" class="form-control custom-border"
+                        id="floatingInputTelefoneResponsavelInternacional" placeholder="Telefone do responsavel"
+                        data-bs-toggle="tooltip" data-bs-title="(DDI) + Número" autocomplete="off">
+                    <label for="floatingInputTelefoneResponsavelInternacional" style="left: auto;">Telefone Internacional</label>
+                </div>
+            </div>
+            <h4 class="mt-4 pt-4">Dados do contra turno</h4>
+            <hr>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="utilizaTransporte" class="form-select custom-border" id="floatingSelectTransporte"
+                        aria-label="Transportes">
+                        <option selected>Escolha uma opção</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                    </select>
+                    <label for="floatingSelectTransporte" style="left: auto;">Utiliza Transporte escolar?</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="somenteRobotica" class="form-select custom-border" id="floatingSelectSomenteRobotica"
+                        aria-label="Somente Robotica">
+                        <option selected>Escolha uma opção</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                    </select>
+                    <label for="floatingSelectSomenteRobotica" style="left: auto;">Participará somente das aulas de
+                        robótica?</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="outrasOficinas" class="form-select custom-border" id="floatingSelectOutrasOficinas"
+                        aria-label="Outras oficinas">
+                        <option selected>Escolha uma opção</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                    </select>
+                    <label for="floatingSelectOutrasOficinas" style="left: auto;">Participará das outras
+                        oficinas?</label>
+                </div>
+                <div class="mt-4 mb-2 col-4 form-floating">
+                    <select name="status" class="form-select custom-border" id="floatingSelectStatus"
+                        aria-label="Status">
+                        <option selected>Escolha uma opção</option>
+                        <option value="1">Ativo</option>
+                        <option value="2">Inativo</option>
+                    </select>
+                    <label for="floatingSelectStatus" style="left: auto;">Status</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-4 mb-2 col-8 form-floating">
+                    <textarea name="observacoes" class="form-control custom-border" placeholder="Observações aqui"
+                        id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2" style="left: auto;">Observações</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 my-4 pb-4">
+                    <button type="submit" class="btn btn-dark">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const form = document.querySelector('form')
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        let formData = new FormData(form);
+
+        // Convert the FormData to JSON
+        let jsonObject = {};
+        for (const [key, value] of formData.entries()) {
+            jsonObject[key] = value;
+        }
+
+        fetch('/cadastro', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(jsonObject)
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.status === 'success') {
+                    const id = data.id;
+                    Swal.fire({
+                        title: 'Deseja gerar a ficha de cadastro?',
+                        showDenyButton: true,
+                        confirmButtonText: `Sim`,
+                        denyButtonText: `Não`,
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            fetch(`/gerarFichaCadastro/${id}`, {
+                                method: 'POST',
+                            })
+                                .then((response) => response.blob())
+                                .then((blob) => {
+                                    const url = window.URL.createObjectURL(blob);
+                                    const link = document.createElement('a');
+                                    link.href = url;
+                                    link.setAttribute('download', 'fichaCadastro.pdf');
+                                    document.body.appendChild(link);
+                                    link.click();
+                                }).then(() => {
+                                    window.location.href = '/cadastro'
+                                })
+                                .catch((error) => {
+                                    console.error(error);
+                                });
+                        } else if (result.isDenied) {
+                            Swal.fire('Ficha de cadastro não gerada', '', 'info')
+                            .then(() => {
+                                window.location.href = '/cadastro'
+                            })
+                        }
+                    })
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    })
+</script>

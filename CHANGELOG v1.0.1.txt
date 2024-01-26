@@ -1,0 +1,11 @@
+Correção de bugs:
+- Corrigido máscara de telefone. Agora o número é formatado corretamente. Antes: (44) 9999-99999 | Agora: (44) 99999-9999 ou (44) 9999-9999.
+- Corrigido a Dashboard, agora o gráfico "Alunos por período" e "Quantidade de Alunos por Turma e Período", mostrará apenas os alunos ativos.
+
+Melhorias:
+- Se o status do aluno não for preenchido, o sistema irá considerar como ativo.
+
+Adições:
+- Na Dashboard no campo "Quantidade de Alunos por Turma e Período", foi adicionada a possibilidade de exportar o gráfico em PNG, SVG ou CSV.
+
+Versão 1.0.1 -> 25/01/2024

@@ -1,0 +1,4 @@
+Correção de bugs:
+- Corrigido o filtro "Turma para Busca", onde caso o usuário escolhesse 1°Ano ou 2°Ano ou 3°Ano ou 4°Ano ou 5°Ano, o sistema não retornava resultados
+
+Versão 1.0.4 -> 25/01/2024

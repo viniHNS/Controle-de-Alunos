@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Ficha V.1.0.4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <main class="d-flex flex-nowrap">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark vh-100 position-sticky top-0"
+            style="width: 280px;">
+            <a href="/"
+                class="d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+
+                <span class="fs-4">Gerador de fichas V.{{version}}</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="pb-1">
+                    <a href="/dashboard" class="nav-link text-white d-flex align-items-center gap-2 {{#ifCond title '==' 'dashboard'}}
+                    active
+                    {{else}}
+                    {{/ifCond}}">
+                        <i class="fa-solid fa-gauge"></i>
+                        &nbsp;Dashboard
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/cadastro" class="nav-link text-white d-flex align-items-center gap-2 {{#ifCond title '==' 'cadastros'}}
+                    active
+                    {{else}}
+                    {{/ifCond}}">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Cadastros
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/consulta" class="nav-link text-white d-flex align-items-center gap-2 {{#ifCond title '==' 'consultas'}}
+                    active
+                    {{else}}
+                    {{/ifCond}}">
+                        <i class="fas fa-magnifying-glass"></i>
+                        &nbsp;Consultas
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/relatorio" class="nav-link text-white d-flex align-items-center gap-2 {{#ifCond title '==' 'relatorios'}}
+                    active
+                    {{else}}
+                    {{/ifCond}}">
+                        <i class="fas fa-clipboard-list"></i>
+                        &nbsp;&nbsp;Relatórios
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/sobre" class="nav-link text-white d-flex align-items-center gap-2 {{#ifCond title '==' 'sobre'}}
+                    active
+                    {{else}}
+                    {{/ifCond}}">
+                        <i class="fas fa-circle-info"></i>
+                        &nbsp;Sobre
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <footer class="d-flex justify-content-center">
+                <p>Desenvolvido com <i class="fa-solid fa-heart" style="color: red;"></i></p>
+            </footer>
+        </div>
+        {{{body}}}
+    </main>
+    <script src="/fontAwesome/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="/js/vanilla-masker.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

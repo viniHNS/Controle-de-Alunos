@@ -16,6 +16,7 @@ Antes de utilizar o Gerador de Ficha Escolar, certifique-se de que você possui 
 - [Node.js](https://nodejs.org/) - A aplicação é escrita em Node.js, portanto, você precisará da versão adequada para a sua plataforma.
 - [npm](https://www.npmjs.com/) - O npm é o gerenciador de pacotes do Node.js e será usado para instalar as dependências.
 - [MongoDB](https://www.mongodb.com/) - O MongoDB é um banco de dados NoSQL que será usado para armazenar as informações dos alunos.
+  - Crie um DB com o nome myDB2.
  ###### Esta aplicação requer uma conexão com a internet para seu correto funcionamento, pois a mesma utiliza bibliotecas via CDN
 
 ## Como Usar
@@ -27,19 +28,21 @@ git clone https://github.com/viniHNS/gerador-ficha-escola.git
 ```
  ###### Ou baixe o repositório em formato ZIP e extraia os arquivos.
 
+2. Altere os dados dos formulários conforme sua necessidade.
 
-2. Instale as dependências do projeto:
+
+3. Instale as dependências do projeto:
 
 ```bash
 npm install
 ```
-3. Configure as variáveis de ambiente, no arquivo `.env`, com as informações do seu banco de dados:
+4. Configure as variáveis de ambiente, no arquivo `.env`, com as informações do seu banco de dados:
 
 ```bash
 PORT = "Porta da aplicação"
 CONNECTION_STRING = "Sua string de conexão"
 ```
-4. Inicie a aplicação: 
+5. Inicie a aplicação: 
 
 ```bash
 npm start
@@ -50,9 +53,9 @@ Ou, se preferir utilizar o script .bat (Windows):
 start.bat
 ```
 
-###### Para iniciar este script de forma automática, adicione-o ao seu diretório de inicialização do Windows. Para isso, pressione a tecla Windows + R, digite `shell:startup`. Em seguida, copie o arquivo `start.bat` para este diretório.
+###### Para iniciar este script de forma automática, primeiro altere o caminho no arquivo start.bat e adicione-o ao seu diretório de inicialização do Windows. Para isso, pressione a tecla Windows + R, digite `shell:startup`. Em seguida, copie o arquivo `start.bat` para este diretório.
 
-5. Acesse a aplicação em seu navegador:
+6. Acesse a aplicação em seu navegador:
 
 ```bash
 http://localhost:{Porta Configurada}/

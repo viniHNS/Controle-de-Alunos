@@ -12,11 +12,10 @@ Este repositório contém um Gerador de Ficha Escolar desenvolvido em Node.js, u
 ## Pré-requisitos
 
 Antes de utilizar o Gerador de Ficha Escolar, certifique-se de que você possui as seguintes dependências instaladas:
-
+https://github.com/viniHNS/Controle-de-Alunos/blob/main/README.md
 - [Node.js](https://nodejs.org/) - A aplicação é escrita em Node.js, portanto, você precisará da versão adequada para a sua plataforma.
 - [npm](https://www.npmjs.com/) - O npm é o gerenciador de pacotes do Node.js e será usado para instalar as dependências.
 - [MongoDB](https://www.mongodb.com/) - O MongoDB é um banco de dados NoSQL que será usado para armazenar as informações dos alunos.
-  - Crie um DB com o nome myDB2.
  ###### Esta aplicação requer uma conexão com a internet para seu correto funcionamento, pois a mesma utiliza bibliotecas via CDN
 
 ## Como Usar
